@@ -69,13 +69,13 @@
   [./xdisp]
     type = FunctionPresetBC
     variable = disp_x
-    boundary = 3
+    boundary = 2
     function = tfunc
   [../]
   [./yfix]
     type = PresetBC
     variable = disp_y
-    boundary = '1 3'
+    boundary = '1 2'
     value = 0
   [../]
   [./xfix]

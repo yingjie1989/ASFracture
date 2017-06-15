@@ -65,7 +65,7 @@
 
   [./elastic]
        type = CohesiveLinearIsoElasticPFDamage
-       c = d_in
+       c = d
        kdamage = 1e-6
        store_stress_old = true
        gc_prop_var = 'gc_prop'
