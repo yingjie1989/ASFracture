@@ -2,7 +2,7 @@
 [Mesh]
   type = FileMesh
   file = crack_mesh.e
-  uniform_refine = 2
+  uniform_refine = 1
 []
 
 [GlobalParams]
@@ -17,10 +17,10 @@
 []
 
 [AuxVariables]
-  [./resid_x]
-  [../]
-  [./resid_y]
-  [../]
+#  [./resid_x]
+#  [../]
+#  [./resid_y]
+#  [../]
   [./stress_xy]
     order = CONSTANT
     family = MONOMIAL
@@ -57,7 +57,7 @@
 [AuxKernels]
   [./stress_xy]
     type = RankTwoAux
-    variable = stress_yy
+    variable = stress_xy
     rank_two_tensor = stress
     index_j = 0
     index_i = 1
@@ -69,7 +69,7 @@
   [./xdisp]
     type = FunctionPresetBC
     variable = disp_x
-    boundary = 2
+    boundary = 3
     function = tfunc
   [../]
   [./yfix]
@@ -95,12 +95,12 @@
   [./elastic]
        type = CohesiveLinearIsoElasticPFDamage
        c = d_in
-       kdamage = 1e-8
+       kdamage = 1e-6
        store_stress_old = true
        gc_prop_var = 'gc_prop'
        Emod = 'E'
        sigmac = 'sc'
-       l = 0.04
+       l = 0.05
        p = 3
   [../]
 
@@ -121,18 +121,18 @@
   [../]
 []
 
-[Postprocessors]
-  [./resid_x]
-    type = NodalSum
-    variable = resid_x
-    boundary = 2
-  [../]
-  [./resid_y]
-    type = NodalSum
-    variable = resid_y
-    boundary = 2
-  [../]
-[]
+#[Postprocessors]
+#  [./resid_x]
+#    type = NodalSum
+#    variable = resid_x
+#    boundary = 2
+#  [../]
+#  [./resid_y]
+#    type = NodalSum
+#    variable = resid_y
+#    boundary = 2
+#  [../]
+#[]
 
 [Preconditioning]
   active = 'smp'
@@ -146,11 +146,11 @@
   type = Transient
 
   solve_type = PJFNK
-  petsc_options_iname = '-pc_type -ksp_gmres_restart -sub_ksp_type -sub_pc_type -pc_asm_overlap'
-  petsc_options_value = 'asm      31                  preonly       lu           1'
+#  petsc_options_iname = '-pc_type -ksp_gmres_restart -sub_ksp_type -sub_pc_type -pc_asm_overlap'
+#  petsc_options_value = 'asm      31                  preonly       lu           1'
 
-  #petsc_options_iname = '-pc_type -pc_factor_mat_solver_package'
-  #petsc_options_value = 'lu superlu_dist'
+  petsc_options_iname = '-pc_type -pc_factor_mat_solver_package'
+  petsc_options_value = 'lu superlu_dist'
 
   nl_rel_tol = 1e-8
   l_max_its = 30
@@ -164,7 +164,8 @@
 []
 
 [Outputs]
-  file_base = ShearModeIIDisp
+  file_base = ModeIIDisp
+  interval = 10
   exodus = true
   csv = true
   gnuplot = true

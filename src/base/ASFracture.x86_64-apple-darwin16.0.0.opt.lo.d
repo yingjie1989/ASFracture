@@ -179,27 +179,33 @@
   /Users/yingjie/Documents/moose_projects/moose/framework/include/parser/MooseSyntax.h \
   /Users/yingjie/Documents/moose_projects/moose/modules/tensor_mechanics/include/base/TensorMechanicsApp.h \
   /Users/yingjie/Documents/moose_projects/moose/modules/phase_field/include/base/PhaseFieldApp.h \
-  /Users/yingjie/Documents/moose_projects/ASFracture/include/BC/CoupledNeumannBC.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/bcs/IntegratedBC.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/bcs/BoundaryCondition.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/functions/FunctionInterface.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/userobject/UserObjectInterface.h \
+  /Users/yingjie/Documents/moose_projects/moose/modules/heat_conduction/include/base/HeatConductionApp.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/auxkernel/NewmarkDispAux.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/auxkernels/AuxKernel.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/CoupleableMooseVariableDependencyIntermediateInterface.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/Coupleable.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableBase.h \
+  /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/fe_type.h \
+  /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/enum_fe_family.h \
+  /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/enum_inf_map_type.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/ScalarCoupleable.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariable.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableScalar.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableInterface.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableDependencyInterface.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialPropertyInterface.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialData.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialPropertyStorage.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/FEProblem.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/FEProblemBase.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/SubProblem.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/Problem.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/dirackernels/DiracKernelInfo.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/geomsearch/GeometricSearchData.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableBase.h \
-  /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/fe_type.h \
-  /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/enum_fe_family.h \
-  /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/enum_inf_map_type.h \
   /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/coupling_matrix.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/AuxiliarySystem.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/SystemBase.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/VariableWarehouse.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableScalar.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariable.h \
   /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/exodusII_io.h \
   /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/mesh_input.h \
   /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/mesh_base.h \
@@ -238,8 +244,6 @@
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseObjectWarehouseBase.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/DependencyResolverInterface.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/BoundaryRestrictable.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialData.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialPropertyStorage.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/BlockRestrictable.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/TransientInterface.h \
   /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/explicit_system.h \
@@ -267,24 +271,24 @@
   /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/enum_quadrature_type.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseEigenSystem.h \
   /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/eigen_system.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/functions/FunctionInterface.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/userobject/UserObjectInterface.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/userobject/UserObject.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/ScalarCoupleable.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/postprocessors/PostprocessorInterface.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/geomsearch/GeometricSearchInterface.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/BoundaryRestrictableRequired.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/ZeroInterface.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/utils/RandomInterface.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/CoupleableMooseVariableDependencyIntermediateInterface.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/Coupleable.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableInterface.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableDependencyInterface.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialPropertyInterface.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/geomsearch/GeometricSearchInterface.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/ZeroInterface.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/vectorpostprocessors/VectorPostprocessorInterface.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/BC/CoupledNeumannBC.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/bcs/IntegratedBC.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/bcs/BoundaryCondition.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/BoundaryRestrictableRequired.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/BC/CoupledNeumannVectorBC.h \
   /Users/yingjie/Documents/moose_projects/moose/modules/phase_field/include/materials/DerivativeParsedMaterial.h \
   /Users/yingjie/Documents/moose_projects/moose/modules/phase_field/include/materials/DerivativeParsedMaterialHelper.h \
   /Users/yingjie/Documents/moose_projects/moose/modules/phase_field/include/materials/DerivativeFunctionMaterialBase.h \
   /Users/yingjie/Documents/moose_projects/moose/modules/phase_field/include/materials/FunctionMaterialBase.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/Material.h \
-  /Users/yingjie/Documents/moose_projects/moose/framework/include/vectorpostprocessors/VectorPostprocessorInterface.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/DerivativeMaterialInterface.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/kernels/KernelBase.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/DerivativeMaterialPropertyNameInterface.h \
@@ -304,13 +308,35 @@
   /Users/yingjie/Documents/moose_projects/moose/framework/contrib/mtwist/include/mtwist.h \
   /Users/yingjie/Documents/moose_projects/moose/modules/tensor_mechanics/include/utils/RotationTensor.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/functions/Function.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/materials/CohesiveLinearIsoElasticPFDamage.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/materials/PFFracRandomBulkRateMaterial.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/materials/WeibullMaterial.h \
   /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/Diffusion_D.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/kernels/Diffusion.h \
   /Users/yingjie/Documents/moose_projects/moose/framework/include/kernels/Kernel.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/CohesivePFFracBulkRate.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/kernels/KernelValue.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/PFFracBulkRateModify.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/PFFracBulkRateAxisymmetric.h \
   /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/SourceMonopole.h \
-  /Users/yingjie/Documents/moose_projects/ASFracture/include/materials/ElasticEnergyMaterial2DFrac.h \
-  /Users/yingjie/Documents/moose_projects/ASFracture/include/materials/ElasticMaterial2DFrac.h \
-  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/PFFracBulkRateModify.h
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/StressDivergenceRZPFFracTensors.h \
+  /Users/yingjie/Documents/moose_projects/moose/modules/tensor_mechanics/include/kernels/StressDivergenceRZTensors.h \
+  /Users/yingjie/Documents/moose_projects/moose/modules/tensor_mechanics/include/kernels/StressDivergenceTensors.h \
+  /Users/yingjie/Documents/moose_projects/moose/modules/tensor_mechanics/include/kernels/ALEKernel.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/base/Assembly.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/MassLumpedReaction.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/StressDivergenceExpPFFracTensors.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/StressDivergenceExpTensors.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/StressDivergenceExplicitTensors.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/InertialForceExp.h \
+  /Users/yingjie/Documents/moose_projects/moose/modules/phase_field/include/kernels/PFFracIntVar.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/PFFracCoupledInterfaceExp.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/kernels/KernelGrad.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/TimeDerivativeExp.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/dirackernels/MonopoleDirac.h \
+  /Users/yingjie/Documents/moose_projects/moose/framework/include/dirackernels/DiracKernel.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/auxkernel/ExpAccelAux.h \
+  /Users/yingjie/Documents/moose_projects/ASFracture/include/auxkernel/ExpVelAux.h
 
 /Users/yingjie/Documents/moose_projects/ASFracture/include/base/ASFracture.h:
 
@@ -670,15 +696,39 @@
 
 /Users/yingjie/Documents/moose_projects/moose/modules/phase_field/include/base/PhaseFieldApp.h:
 
-/Users/yingjie/Documents/moose_projects/ASFracture/include/BC/CoupledNeumannBC.h:
+/Users/yingjie/Documents/moose_projects/moose/modules/heat_conduction/include/base/HeatConductionApp.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/bcs/IntegratedBC.h:
+/Users/yingjie/Documents/moose_projects/ASFracture/include/auxkernel/NewmarkDispAux.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/bcs/BoundaryCondition.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/auxkernels/AuxKernel.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/functions/FunctionInterface.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/base/CoupleableMooseVariableDependencyIntermediateInterface.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/userobject/UserObjectInterface.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/base/Coupleable.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableBase.h:
+
+/Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/fe_type.h:
+
+/Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/enum_fe_family.h:
+
+/Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/enum_inf_map_type.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/base/ScalarCoupleable.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariable.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableScalar.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableInterface.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableDependencyInterface.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialPropertyInterface.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialData.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialPropertyStorage.h:
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/base/FEProblem.h:
 
@@ -692,14 +742,6 @@
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/geomsearch/GeometricSearchData.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableBase.h:
-
-/Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/fe_type.h:
-
-/Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/enum_fe_family.h:
-
-/Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/enum_inf_map_type.h:
-
 /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/coupling_matrix.h:
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/base/AuxiliarySystem.h:
@@ -707,10 +749,6 @@
 /Users/yingjie/Documents/moose_projects/moose/framework/include/base/SystemBase.h:
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/base/VariableWarehouse.h:
-
-/Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableScalar.h:
-
-/Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariable.h:
 
 /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/exodusII_io.h:
 
@@ -788,10 +826,6 @@
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/base/BoundaryRestrictable.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialData.h:
-
-/Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialPropertyStorage.h:
-
 /Users/yingjie/Documents/moose_projects/moose/framework/include/base/BlockRestrictable.h:
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/base/TransientInterface.h:
@@ -846,29 +880,31 @@
 
 /Users/yingjie/Documents/moose_projects/moose/scripts/../libmesh/installed/include/libmesh/eigen_system.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/userobject/UserObject.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/functions/FunctionInterface.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/base/ScalarCoupleable.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/userobject/UserObjectInterface.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/userobject/UserObject.h:
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/postprocessors/PostprocessorInterface.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/geomsearch/GeometricSearchInterface.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/utils/RandomInterface.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/base/BoundaryRestrictableRequired.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/geomsearch/GeometricSearchInterface.h:
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/base/ZeroInterface.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/utils/RandomInterface.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/vectorpostprocessors/VectorPostprocessorInterface.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/base/CoupleableMooseVariableDependencyIntermediateInterface.h:
+/Users/yingjie/Documents/moose_projects/ASFracture/include/BC/CoupledNeumannBC.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/base/Coupleable.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/bcs/IntegratedBC.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableInterface.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/bcs/BoundaryCondition.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/base/MooseVariableDependencyInterface.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/base/BoundaryRestrictableRequired.h:
 
-/Users/yingjie/Documents/moose_projects/moose/framework/include/materials/MaterialPropertyInterface.h:
+/Users/yingjie/Documents/moose_projects/ASFracture/include/BC/CoupledNeumannVectorBC.h:
 
 /Users/yingjie/Documents/moose_projects/moose/modules/phase_field/include/materials/DerivativeParsedMaterial.h:
 
@@ -879,8 +915,6 @@
 /Users/yingjie/Documents/moose_projects/moose/modules/phase_field/include/materials/FunctionMaterialBase.h:
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/Material.h:
-
-/Users/yingjie/Documents/moose_projects/moose/framework/include/vectorpostprocessors/VectorPostprocessorInterface.h:
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/materials/DerivativeMaterialInterface.h:
 
@@ -920,16 +954,60 @@
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/functions/Function.h:
 
+/Users/yingjie/Documents/moose_projects/ASFracture/include/materials/CohesiveLinearIsoElasticPFDamage.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/materials/PFFracRandomBulkRateMaterial.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/materials/WeibullMaterial.h:
+
 /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/Diffusion_D.h:
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/kernels/Diffusion.h:
 
 /Users/yingjie/Documents/moose_projects/moose/framework/include/kernels/Kernel.h:
 
-/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/SourceMonopole.h:
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/CohesivePFFracBulkRate.h:
 
-/Users/yingjie/Documents/moose_projects/ASFracture/include/materials/ElasticEnergyMaterial2DFrac.h:
-
-/Users/yingjie/Documents/moose_projects/ASFracture/include/materials/ElasticMaterial2DFrac.h:
+/Users/yingjie/Documents/moose_projects/moose/framework/include/kernels/KernelValue.h:
 
 /Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/PFFracBulkRateModify.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/PFFracBulkRateAxisymmetric.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/SourceMonopole.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/StressDivergenceRZPFFracTensors.h:
+
+/Users/yingjie/Documents/moose_projects/moose/modules/tensor_mechanics/include/kernels/StressDivergenceRZTensors.h:
+
+/Users/yingjie/Documents/moose_projects/moose/modules/tensor_mechanics/include/kernels/StressDivergenceTensors.h:
+
+/Users/yingjie/Documents/moose_projects/moose/modules/tensor_mechanics/include/kernels/ALEKernel.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/base/Assembly.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/MassLumpedReaction.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/StressDivergenceExpPFFracTensors.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/StressDivergenceExpTensors.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/StressDivergenceExplicitTensors.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/InertialForceExp.h:
+
+/Users/yingjie/Documents/moose_projects/moose/modules/phase_field/include/kernels/PFFracIntVar.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/PFFracCoupledInterfaceExp.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/kernels/KernelGrad.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/kernel/TimeDerivativeExp.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/dirackernels/MonopoleDirac.h:
+
+/Users/yingjie/Documents/moose_projects/moose/framework/include/dirackernels/DiracKernel.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/auxkernel/ExpAccelAux.h:
+
+/Users/yingjie/Documents/moose_projects/ASFracture/include/auxkernel/ExpVelAux.h:

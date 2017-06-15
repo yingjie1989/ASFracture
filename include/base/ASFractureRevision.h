@@ -3,6 +3,6 @@
 #ifndef ASFRACTURE_REVISION_H
 #define ASFRACTURE_REVISION_H
 
-#define ASFRACTURE_REVISION "unknown"
+#define ASFRACTURE_REVISION "git commit 6a84cc0 on 2017-06-14"
 
 #endif // ASFRACTURE_REVISION_H
