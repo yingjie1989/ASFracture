@@ -9,7 +9,7 @@
 ###############################################################################
 #//THESE VARIABLES ARE SET ONLY IF THEY ARE NOT DEFINED (OPERATOR ?=)
 EXAMPLE_DIR        ?= $(shell dirname `pwd`)
-MOOSE_DIR          ?= /Users/yingjie/Documents/moose_projects/moose
+MOOSE_DIR          ?= /Users/yingjie/moose
 FRAMEWORK_DIR      ?= $(MOOSE_DIR)/framework
 MODULE_DIR	   ?= $(MOOSE_DIR)/modules
 ###############################################################################

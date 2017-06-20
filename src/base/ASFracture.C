@@ -50,6 +50,7 @@
 //custom kernel
 #include "Diffusion_D.h"
 #include "CohesivePFFracBulkRate.h"
+#include "CohesivePFFracBulkRateHistory.h"
 #include "PFFracBulkRateModify.h"
 #include "PFFracBulkRateAxisymmetric.h"
 #include "SourceMonopole.h"
@@ -110,6 +111,7 @@ ASFracture::registerObjects(Factory & factory)
 registerKernel(Diffusion_D);
 registerKernel(PFFracBulkRateModify);
 registerKernel(CohesivePFFracBulkRate);
+registerKernel(CohesivePFFracBulkRateHistory);
 registerKernel(PFFracBulkRateAxisymmetric);
 registerKernel(SourceMonopole);
 registerKernel(StressDivergenceRZPFFracTensors);
