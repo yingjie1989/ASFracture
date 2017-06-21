@@ -4,7 +4,7 @@
 /*          All contents are licensed under LGPL V2.1           */
 /*             See LICENSE for full restrictions                */
 /****************************************************************/
-#include "CohesivePFFracBulkRateHistoryHistory.h"
+#include "CohesivePFFracBulkRateHistory.h"
 
 template<>
 InputParameters validParams<CohesivePFFracBulkRateHistory>()
@@ -29,14 +29,14 @@ InputParameters validParams<CohesivePFFracBulkRateHistory>()
 }
 
 CohesivePFFracBulkRateHistory::CohesivePFFracBulkRateHistory(const InputParameters & parameters):
-  KernelValue(parameters),
+  Kernel(parameters),
   _gc_prop(getMaterialProperty<Real>("gc_prop_var")),
   _G0_pos(getMaterialProperty<Real>("G0_var")),
  _dG0_pos_dstrain(isParamValid("dG0_dstrain_var") ? &getMaterialProperty<RankTwoTensor>("dG0_dstrain_var"): NULL),
   _Emod(getMaterialProperty<Real>("Emod")),
   _sigmac(getMaterialProperty<Real>("sigmac")),
   _u_old(valueOld()),
-  _grad_u_old(GradientOld()),
+  _grad_u_old(gradientOld()),
   _xdisp_coupled(isCoupled("disp_x")),
   _ydisp_coupled(isCoupled("disp_y")),
   _zdisp_coupled(isCoupled("disp_z")),

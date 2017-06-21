@@ -1,7 +1,8 @@
-/Users/yingjie/Documents/ASFracture/src/auxkernel/ExpVelAux.x86_64-apple-darwin16.5.0.opt.lo: \
-  /Users/yingjie/Documents/ASFracture/src/auxkernel/ExpVelAux.C \
-  /Users/yingjie/Documents/ASFracture/include/auxkernel/ExpVelAux.h \
-  /Users/yingjie/moose/framework/include/auxkernels/AuxKernel.h \
+/Users/yingjie/Documents/ASFracture/src/kernel/CohesivePFFracBulkRateHistory.x86_64-apple-darwin16.5.0.opt.lo: \
+  /Users/yingjie/Documents/ASFracture/src/kernel/CohesivePFFracBulkRateHistory.C \
+  /Users/yingjie/Documents/ASFracture/include/kernel/CohesivePFFracBulkRateHistory.h \
+  /Users/yingjie/moose/framework/include/kernels/Kernel.h \
+  /Users/yingjie/moose/framework/include/kernels/KernelBase.h \
   /Users/yingjie/moose/framework/include/base/MooseObject.h \
   /Users/yingjie/moose/framework/include/utils/InputParameters.h \
   /Users/yingjie/moose/framework/include/base/MooseError.h \
@@ -301,20 +302,26 @@
   /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/fparser.hh \
   /Users/yingjie/moose/framework/include/base/ConsoleStreamInterface.h \
   /Users/yingjie/moose/framework/include/base/ConsoleStream.h \
-  /Users/yingjie/moose/framework/include/base/MooseVariable.h \
-  /Users/yingjie/moose/framework/include/base/MooseVariableBase.h \
-  /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/fe_type.h \
-  /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/enum_fe_family.h \
-  /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/enum_inf_map_type.h \
+  /Users/yingjie/moose/framework/include/base/BlockRestrictable.h \
+  /Users/yingjie/moose/framework/include/utils/ParallelUniqueId.h \
+  /opt/moose/tbb/include/tbb/concurrent_queue.h \
+  /opt/moose/tbb/include/tbb/internal/_concurrent_queue_impl.h \
+  /Users/yingjie/moose/framework/include/materials/MaterialData.h \
+  /Users/yingjie/moose/framework/include/materials/MaterialPropertyStorage.h \
   /Users/yingjie/moose/framework/include/base/SetupInterface.h \
   /Users/yingjie/moose/framework/include/utils/MultiMooseEnum.h \
   /Users/yingjie/moose/framework/include/utils/MooseEnumBase.h \
   /Users/yingjie/moose/framework/include/base/CoupleableMooseVariableDependencyIntermediateInterface.h \
   /Users/yingjie/moose/framework/include/base/Coupleable.h \
+  /Users/yingjie/moose/framework/include/base/MooseVariableBase.h \
+  /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/fe_type.h \
+  /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/enum_fe_family.h \
+  /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/enum_inf_map_type.h \
   /Users/yingjie/moose/framework/include/base/ScalarCoupleable.h \
   /Users/yingjie/moose/framework/include/base/MooseVariableInterface.h \
   /Users/yingjie/moose/framework/include/base/MooseVariableDependencyInterface.h \
-  /Users/yingjie/moose/framework/include/materials/MaterialPropertyInterface.h \
+  /Users/yingjie/moose/framework/include/functions/FunctionInterface.h \
+  /Users/yingjie/moose/framework/include/userobject/UserObjectInterface.h \
   /Users/yingjie/moose/framework/include/base/FEProblemBase.h \
   /Users/yingjie/moose/framework/include/base/SubProblem.h \
   /Users/yingjie/moose/framework/include/base/Problem.h \
@@ -333,12 +340,6 @@
   /Users/yingjie/moose/framework/include/base/DependencyResolverInterface.h \
   /Users/yingjie/moose/framework/include/utils/DependencyResolver.h \
   /Users/yingjie/moose/framework/include/base/BoundaryRestrictable.h \
-  /Users/yingjie/moose/framework/include/materials/MaterialData.h \
-  /Users/yingjie/moose/framework/include/materials/MaterialPropertyStorage.h \
-  /Users/yingjie/moose/framework/include/base/BlockRestrictable.h \
-  /Users/yingjie/moose/framework/include/utils/ParallelUniqueId.h \
-  /opt/moose/tbb/include/tbb/concurrent_queue.h \
-  /opt/moose/tbb/include/tbb/internal/_concurrent_queue_impl.h \
   /Users/yingjie/moose/framework/include/base/TransientInterface.h \
   /Users/yingjie/moose/framework/include/base/SolverParams.h \
   /Users/yingjie/moose/framework/include/utils/PetscSupport.h \
@@ -392,17 +393,23 @@
   /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/type_n_tensor.h \
   /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/qoi_set.h \
   /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/variable.h \
-  /Users/yingjie/moose/framework/include/functions/FunctionInterface.h \
-  /Users/yingjie/moose/framework/include/userobject/UserObjectInterface.h \
   /Users/yingjie/moose/framework/include/postprocessors/PostprocessorInterface.h \
+  /Users/yingjie/moose/framework/include/vectorpostprocessors/VectorPostprocessorInterface.h \
+  /Users/yingjie/moose/framework/include/materials/MaterialPropertyInterface.h \
   /Users/yingjie/moose/framework/include/utils/RandomInterface.h \
   /Users/yingjie/moose/framework/include/geomsearch/GeometricSearchInterface.h \
   /Users/yingjie/moose/framework/include/base/ZeroInterface.h \
-  /Users/yingjie/moose/framework/include/vectorpostprocessors/VectorPostprocessorInterface.h
+  /Users/yingjie/moose/framework/include/utils/RankTwoTensor.h \
+  /Users/yingjie/moose/framework/include/utils/RankFourTensor.h \
+  /Users/yingjie/moose/framework/include/utils/MooseRandom.h \
+  /Users/yingjie/moose/framework/contrib/mtwist/include/randistrs.h \
+  /Users/yingjie/moose/framework/contrib/mtwist/include/mtwist.h
 
-/Users/yingjie/Documents/ASFracture/include/auxkernel/ExpVelAux.h:
+/Users/yingjie/Documents/ASFracture/include/kernel/CohesivePFFracBulkRateHistory.h:
 
-/Users/yingjie/moose/framework/include/auxkernels/AuxKernel.h:
+/Users/yingjie/moose/framework/include/kernels/Kernel.h:
+
+/Users/yingjie/moose/framework/include/kernels/KernelBase.h:
 
 /Users/yingjie/moose/framework/include/base/MooseObject.h:
 
@@ -1002,15 +1009,17 @@
 
 /Users/yingjie/moose/framework/include/base/ConsoleStream.h:
 
-/Users/yingjie/moose/framework/include/base/MooseVariable.h:
+/Users/yingjie/moose/framework/include/base/BlockRestrictable.h:
 
-/Users/yingjie/moose/framework/include/base/MooseVariableBase.h:
+/Users/yingjie/moose/framework/include/utils/ParallelUniqueId.h:
 
-/Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/fe_type.h:
+/opt/moose/tbb/include/tbb/concurrent_queue.h:
 
-/Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/enum_fe_family.h:
+/opt/moose/tbb/include/tbb/internal/_concurrent_queue_impl.h:
 
-/Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/enum_inf_map_type.h:
+/Users/yingjie/moose/framework/include/materials/MaterialData.h:
+
+/Users/yingjie/moose/framework/include/materials/MaterialPropertyStorage.h:
 
 /Users/yingjie/moose/framework/include/base/SetupInterface.h:
 
@@ -1022,13 +1031,23 @@
 
 /Users/yingjie/moose/framework/include/base/Coupleable.h:
 
+/Users/yingjie/moose/framework/include/base/MooseVariableBase.h:
+
+/Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/fe_type.h:
+
+/Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/enum_fe_family.h:
+
+/Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/enum_inf_map_type.h:
+
 /Users/yingjie/moose/framework/include/base/ScalarCoupleable.h:
 
 /Users/yingjie/moose/framework/include/base/MooseVariableInterface.h:
 
 /Users/yingjie/moose/framework/include/base/MooseVariableDependencyInterface.h:
 
-/Users/yingjie/moose/framework/include/materials/MaterialPropertyInterface.h:
+/Users/yingjie/moose/framework/include/functions/FunctionInterface.h:
+
+/Users/yingjie/moose/framework/include/userobject/UserObjectInterface.h:
 
 /Users/yingjie/moose/framework/include/base/FEProblemBase.h:
 
@@ -1065,18 +1084,6 @@
 /Users/yingjie/moose/framework/include/utils/DependencyResolver.h:
 
 /Users/yingjie/moose/framework/include/base/BoundaryRestrictable.h:
-
-/Users/yingjie/moose/framework/include/materials/MaterialData.h:
-
-/Users/yingjie/moose/framework/include/materials/MaterialPropertyStorage.h:
-
-/Users/yingjie/moose/framework/include/base/BlockRestrictable.h:
-
-/Users/yingjie/moose/framework/include/utils/ParallelUniqueId.h:
-
-/opt/moose/tbb/include/tbb/concurrent_queue.h:
-
-/opt/moose/tbb/include/tbb/internal/_concurrent_queue_impl.h:
 
 /Users/yingjie/moose/framework/include/base/TransientInterface.h:
 
@@ -1184,11 +1191,11 @@
 
 /Users/yingjie/moose/scripts/../libmesh/installed/include/libmesh/variable.h:
 
-/Users/yingjie/moose/framework/include/functions/FunctionInterface.h:
-
-/Users/yingjie/moose/framework/include/userobject/UserObjectInterface.h:
-
 /Users/yingjie/moose/framework/include/postprocessors/PostprocessorInterface.h:
+
+/Users/yingjie/moose/framework/include/vectorpostprocessors/VectorPostprocessorInterface.h:
+
+/Users/yingjie/moose/framework/include/materials/MaterialPropertyInterface.h:
 
 /Users/yingjie/moose/framework/include/utils/RandomInterface.h:
 
@@ -1196,4 +1203,12 @@
 
 /Users/yingjie/moose/framework/include/base/ZeroInterface.h:
 
-/Users/yingjie/moose/framework/include/vectorpostprocessors/VectorPostprocessorInterface.h:
+/Users/yingjie/moose/framework/include/utils/RankTwoTensor.h:
+
+/Users/yingjie/moose/framework/include/utils/RankFourTensor.h:
+
+/Users/yingjie/moose/framework/include/utils/MooseRandom.h:
+
+/Users/yingjie/moose/framework/contrib/mtwist/include/randistrs.h:
+
+/Users/yingjie/moose/framework/contrib/mtwist/include/mtwist.h:
