@@ -45,6 +45,7 @@
 #include "CohesiveLinearIsoElasticPFDamage.h"
 #include "PFFracRandomBulkRateMaterial.h"
 #include "WeibullMaterial.h"
+#include "WeibullBulkRateMaterial.h"
 
 
 //custom kernel
@@ -143,7 +144,7 @@ registerMaterial(LinearIsoElasticPFDamageModify);
 registerMaterial(CohesiveLinearIsoElasticPFDamage);
 registerMaterial(PFFracRandomBulkRateMaterial);
 registerMaterial(WeibullMaterial);
-
+registerMaterial(WeibullBulkRateMaterial);
 
 //Auxkernels
 registerAux(NewmarkDispAux);

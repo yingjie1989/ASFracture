@@ -3,6 +3,7 @@
 #ifndef ASFRACTURE_REVISION_H
 #define ASFRACTURE_REVISION_H
 
-#define ASFRACTURE_REVISION "git commit 6a84cc0 on 2017-06-14"
+#define ASFRACTURE_REVISION "git commit e7ce8b8 on 2017-06-20"
+#define ASFRACTURE_VERSION "e7ce8b8"
 
 #endif // ASFRACTURE_REVISION_H
