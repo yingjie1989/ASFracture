@@ -20,7 +20,6 @@ InputParameters validParams<CohesivePFFracBulkRateHistory>()
   params.addParam<MaterialPropertyName>("dG0_dstrain_var", "Material property name with derivative of G0_pos with strain");
   params.addRequiredParam<MaterialPropertyName>("Emod", "Material property name with Young's Modulus");
   params.addRequiredParam<MaterialPropertyName>("sigmac", "Material property name with strength");
-  params.addRequiredCoupledVar("beta", "Auxiliary variable");
   params.addCoupledVar("disp_x", "The x displacement");
   params.addCoupledVar("disp_y", "The y displacement");
   params.addCoupledVar("disp_z", "The z displacement");
