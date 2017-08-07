@@ -4,8 +4,8 @@
 /*          All contents are licensed under LGPL V2.1           */
 /*             See LICENSE for full restrictions                */
 /****************************************************************/
-#ifndef COHESIVEPFFRACBULKRATEHSITORY_H
-#define COHESIVEPFFRACBULKRATEHSITORY_H
+#ifndef BARCELONAPFFRACBULKRATEHSITORY_H
+#define BARCELONAPFFRACBULKRATEHSITORY_H
 /**
  * Phase field based fracture model
  * This kernel computes the residual and jacobian for bulk free energy contribution to c
@@ -15,16 +15,16 @@
 #include "RankTwoTensor.h"
 
 //Forward Declarations
-class CohesivePFFracBulkRateHistory;
+class BarcelonaPFFracBulkRateHistory;
 
 template<>
-InputParameters validParams<CohesivePFFracBulkRateHistory>();
+InputParameters validParams<BarcelonaPFFracBulkRateHistory>();
 
-class CohesivePFFracBulkRateHistory : public Kernel
+class BarcelonaPFFracBulkRateHistory : public Kernel
 {
 public:
 
-  CohesivePFFracBulkRateHistory(const InputParameters & parameters);
+  BarcelonaPFFracBulkRateHistory(const InputParameters & parameters);
 
 protected:
 
@@ -59,14 +59,10 @@ protected:
   const unsigned int _ydisp_var;
   const unsigned int _zdisp_var;
 
-  bool _ifOld;
   ///Characteristic length, controls damage zone thickness
   Real _l;
   //p parameter
   Real _p;
-
- ///Viscosity parameter ( visco -> 0, rate independent )
-  Real _visco;
 
  private:
 
