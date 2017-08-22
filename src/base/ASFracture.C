@@ -42,7 +42,11 @@
 //material
 #include "DerivativeParsedMaterial.h"
 #include "LinearIsoElasticPFDamageModify.h"
+#include "LinearIsoElasticPFDamageDecomp.h"
+#include "LinearElasticPFDamage.h"
+
 #include "CohesiveLinearIsoElasticPFDamage.h"
+#include "BarcelonaLinearElasticPFDamage.h"
 #include "BarcelonaLinearIsoElasticPFDamage.h"
 #include "PFFracRandomBulkRateMaterial.h"
 #include "WeibullMaterial.h"
@@ -115,6 +119,7 @@ registerKernel(Diffusion_D);
 registerKernel(PFFracBulkRateModify);
 registerKernel(CohesivePFFracBulkRate);
 registerKernel(CohesivePFFracBulkRateHistory);
+registerKernel(BarcelonaPFFracBulkRateHistory);
 registerKernel(PFFracBulkRateAxisymmetric);
 registerKernel(SourceMonopole);
 registerKernel(StressDivergenceRZPFFracTensors);
@@ -130,7 +135,6 @@ registerKernel(PFFracCoupledInterfaceExp);
 
 
 //IC
-//registerInitialCondition(FingerIC);
 
 //Dirackernels
 registerDiracKernel(MonopoleDirac);
@@ -141,9 +145,12 @@ registerBoundaryCondition(CoupledNeumannBC);
 registerBoundaryCondition(CoupledNeumannVectorBC);
 
 //Materials
-
 registerMaterial(LinearIsoElasticPFDamageModify);
+registerMaterial(LinearIsoElasticPFDamageDecomp);
+registerMaterial(LinearElasticPFDamage);
 registerMaterial(CohesiveLinearIsoElasticPFDamage);
+registerMaterial(BarcelonaLinearElasticPFDamage);
+registerMaterial(BarcelonaLinearIsoElasticPFDamage);
 registerMaterial(PFFracRandomBulkRateMaterial);
 registerMaterial(WeibullMaterial);
 registerMaterial(WeibullBulkRateMaterial);

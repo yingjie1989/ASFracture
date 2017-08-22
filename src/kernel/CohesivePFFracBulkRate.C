@@ -98,7 +98,7 @@ CohesivePFFracBulkRate::computeDFDOP(PFFunctionType type)
     	Real _da_dphi2 = 2.0;
       Real _db_dphi2 = 2.0*(1.0+_p*_m);
 
-     	Real _dg_dphi2 = (_da_dphi2*_db_dphi - _db_dphi2*_da_dphi)/(_b*_b) - 2.0*_db_dphi/_b*_dg_dphi;
+      Real _dg_dphi2 = _da_dphi2/_b - 2*_da_dphi*_db_dphi/_b/_b - _a*_db_dphi2/_b/_b + 2*_a*_db_dphi*_db_dphi/_b/_b/_b;
 
     	return _dg_dphi2 * _psi_e/_visco;
     }

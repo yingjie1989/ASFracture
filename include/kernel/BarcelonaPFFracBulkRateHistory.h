@@ -59,6 +59,7 @@ protected:
   const unsigned int _ydisp_var;
   const unsigned int _zdisp_var;
 
+  bool _ifOld;
   ///Characteristic length, controls damage zone thickness
   Real _l;
   //p parameter

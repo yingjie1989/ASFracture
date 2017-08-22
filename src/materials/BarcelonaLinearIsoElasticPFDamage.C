@@ -20,12 +20,16 @@ InputParameters validParams<BarcelonaLinearIsoElasticPFDamage>()
   params.addRequiredParam<MaterialPropertyName>("gc_prop_var", "Material property name with gc value");
   params.addRequiredParam<MaterialPropertyName>("Emod", "Material property name with Young's Modulus");
   params.addRequiredParam<MaterialPropertyName>("sigmac", "Material property name with strength");
+  params.addParam<bool>("ifenergy",false,"whether to calculate energy");
+  params.addParam<bool>("ifstress",false,"whether to calculate stress & jacobian");
 
   return params;
 }
 
 BarcelonaLinearIsoElasticPFDamage::BarcelonaLinearIsoElasticPFDamage(const InputParameters & parameters) :
     ComputeStressBase(parameters),
+    _ifenergy(getParam<bool>("ifenergy")),
+    _ifstress(getParam<bool>("ifstress")),
     _c(coupledValue("c")),
     _kdamage(getParam<Real>("kdamage")),
     _historyEng(getParam<bool>("historyEng")),
@@ -67,30 +71,33 @@ BarcelonaLinearIsoElasticPFDamage::initQpStatefulProperties()
 
 void BarcelonaLinearIsoElasticPFDamage::computeQpStress()
 {
-  updateVar();
-  updateJacobian();
-}
-
-void
-BarcelonaLinearIsoElasticPFDamage::updateVar()
-{
   Real gc = _gc_prop[_qp];
   Real _m = 1.5 * _Emod[_qp] * gc / (_sigmac[_qp]*_sigmac[_qp]*_l);
+  Real lambda = _elasticity_tensor[_qp](0,0,1,1);
+  Real mu = _elasticity_tensor[_qp](0,1,0,1);
 
 
   RankTwoTensor stress0pos, stress0neg, stress0;
   //Isotropic elasticity is assumed
-  Real lambda = _elasticity_tensor[_qp](0,0,1,1);
-  Real mu = _elasticity_tensor[_qp](0,1,0,1);
   Real c = _c[_qp];
   Real _a = (1.0-c)*(1.0-c);
   Real _b = 1.0 + (_m-2.0)*c + (1.0+_p*_m)*c*c;
   Real _degrad = _a / _b;
-  Real xfac = _degrad*(1.0-_kdamage) + _kdamage;
+  Real xfac = _degrad + _kdamage;
 
-  stress0 = _elasticity_tensor * _mechanical_strain;
+  stress0 = _elasticity_tensor[_qp] * _mechanical_strain[_qp];
+ 
 
-  stress0.symmetricEigenvaluesEigenvectors(_eigval, _eigvec);
+  _mechanical_strain[_qp].symmetricEigenvaluesEigenvectors(_eigval, _eigvec);
+
+  printf("Successful Decomposition\n");
+
+  Real etr = 0.0;
+  for (unsigned int i = 0; i < LIBMESH_DIM; ++i)
+    etr += _eigval[i];
+
+  for (unsigned int i = 0; i < LIBMESH_DIM; ++i)
+      _eigval[i] = lambda*etr + 2*mu*_eigval[i];
 
   //Tensors of outerproduct of eigen vectors
   for (unsigned int i = 0; i < LIBMESH_DIM; ++i)
@@ -98,27 +105,27 @@ BarcelonaLinearIsoElasticPFDamage::updateVar()
       for (unsigned int k = 0; k < LIBMESH_DIM; ++k)
         _etens[i](j,k) = _eigvec(j,i) * _eigvec(k,i);
 
-
-  Real etr = 0.0;
-
   for (unsigned int i = 0; i < LIBMESH_DIM; ++i)
   {
-      stress0pos += _etens[i] * (std::abs(_eigval[i]) + _eigval[i]) / 2.0;
-      stress0neg += _etens[i] * (std::abs(_eigval[i]) - _eigval[i]) / 2.0;
-      if (_eigval[i] > 0)
-        etr += _eigval[i] * _eigval[i];
+      if (_eigval[i] >= 0.0)
+        stress0pos += _etens[i] * _eigval[i];
+      else
+        stress0neg += _etens[i] * _eigval[i];
   }
 
-  etr -= _sigmac[_qp] * _sigmac[_qp];
-
   //Damage associated with positive component of stress
-  _stress[_qp] = stress0pos * xfac - stress0neg;
+  _stress[_qp] = stress0pos * xfac + stress0neg;
 
   //Energy with positive principal strains
 
+if (_ifenergy){
+
+  Real G0_drive = 0.5 * stress0pos.doubleContraction(_mechanical_strain[_qp]);
+
+
   Real G0_bar = 0.5 * _sigmac[_qp] * _sigmac[_qp] / _Emod[_qp];
 
-  Real G0_trial = 0.5 / _Emod[_qp] * std::max(etr,0.0) + G0_bar;
+  Real G0_trial =  std::max(G0_bar,G0_drive);
 
  if (!_historyEng){
       _G0_pos[_qp] = G0_trial;
@@ -138,11 +145,50 @@ BarcelonaLinearIsoElasticPFDamage::updateVar()
 
   Real _dg_dphi = _da_dphi/_b - _a/(_b*_b) * _db_dphi;
   _dstress_dc[_qp] = stress0pos * _dg_dphi;
-
 }
 
-void
-BarcelonaLinearIsoElasticPFDamage::updateJacobian()
-{
-  _Jacobian_mult[_qp] = _elasticity_tensor[_qp];
+if (_ifstress){
+  //Used in StressDivergencePFFracTensors Jacobian
+  int alpha, beta, i, j, k, l;
+  int dim = LIBMESH_DIM;
+
+  //Compute the second derivatives of the eigenvalues w.r.t. strain tensor
+  std::vector<RankFourTensor> d2eigvals(dim);
+  RankFourTensor dstress_plus, dstress_minus;
+  RankFourTensor _Jacob_plus,_Jacob_minus;
+
+  for (alpha = 0; alpha < dim; ++alpha)
+      for (beta = 0; beta < dim; ++beta)
+      {
+          if (_eigval[alpha] == _eigval[beta])
+              continue;
+
+          for (i = 0; i < dim; ++i)
+              for (j = 0; j < dim; ++j)
+                  for (k = 0; k < dim; ++k)
+                      for (l = 0; l < dim; ++l)
+                      {
+                          d2eigvals[alpha](i,j,k,l) += 0.5 * ( _eigvec(beta,i) * _eigvec(alpha,j) + _eigvec(alpha,i) * _eigvec(beta,j) )
+                                  * ( _eigvec(beta,k) * _eigvec(alpha,l) + _eigvec(beta,l) * _eigvec(alpha,k) )
+                                  / ( _eigval[alpha] - _eigval[beta] );
+                      }
+      }
+
+      for (alpha = 0; alpha < dim; ++alpha)//loop in eigenvalues
+      {
+          for (i = 0; i < dim; ++i){
+              for (j = 0; j < dim; ++j){
+                  for (k = 0; k < dim; ++k){
+                      for (l = 0; l < dim; ++l){
+                          if (_eigval[alpha]>=0.0) dstress_plus(i,j,k,l) += _eigval[alpha]*d2eigvals[alpha](i,j,k,l) + _etens[alpha](i,j)*_etens[alpha](k,l);
+                          if (_eigval[alpha]<0.0) dstress_minus(i,j,k,l) += _eigval[alpha]*d2eigvals[alpha](i,j,k,l) + _etens[alpha](i,j)*_etens[alpha](k,l);
+                      }
+                  }
+              }
+          }
+      }
+
+      _Jacobian_mult[_qp] = ( xfac * dstress_plus + dstress_minus ) * _elasticity_tensor[_qp];
+  }
+
 }

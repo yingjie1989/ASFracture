@@ -24,9 +24,9 @@ public:
 protected:
   virtual void initQpStatefulProperties() override;
   virtual void computeQpStress();
-  virtual void updateVar();
-  virtual void updateJacobian();
 
+  bool _ifenergy;
+  bool _ifstress;
   const VariableValue & _c;
   /// Small number to avoid non-positive definiteness at or near complete damage
   Real _kdamage;
